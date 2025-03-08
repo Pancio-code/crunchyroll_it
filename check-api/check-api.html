@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test API's</title>
+  <link rel="stylesheet" href="check-api.css">
+</head>
+<body>
+<h2>API Route Checker</h2>
+<form id="apiForm">
+  <select id="apiSelector">
+    <option value="https://www.crunchyroll.com/content/v2/${account_id}/watch-history">GET /content/v2/{account_id}/watch-history</option>
+    <option value="https://www.crunchyroll.com/content/v2/discover/${account_id}/watchlist">GET /content/v2/discover/{account_id}/watchlist</option>
+  </select>
+  <input type="text" id="userToken" placeholder="Enter Bearer Token" required>
+  <textarea id="apiResponse" placeholder="API Response will appear here..." rows="10" readonly></textarea>
+  <button type="submit">Check API</button>
+</form>
+<script src="check-api.js"></script>
+</body>
+</html>

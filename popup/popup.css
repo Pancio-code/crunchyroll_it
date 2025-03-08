@@ -1,0 +1,233 @@
+/* popup.css */
+html {
+    visibility: visible;
+    overflow: visible;
+}
+
+body {
+    font-family: Lato, "Helvetica Neue", helvetica, "sans-serif";
+    background-color: #23252b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 15px 10px 15px;
+    min-width: 430px;
+    max-width: 100%;
+    min-height: 300px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ff640a;
+}
+
+.header .title .logo {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.header .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.message-redirect {
+    background-color: #192e38;
+    border: 2px solid #a0a0a0;
+    display: flex;
+    flex-direction: row;
+    padding-left: .3125rem;
+}
+
+.message-redirect.error {
+    background-color: #381919;
+    border: 2px solid #ff5858;
+    display: flex;
+    flex-direction: row;
+    padding-left: .3125rem;
+}
+
+.message-redirect.error .title {
+    color: #ff5858;
+}
+
+
+.message-redirect .action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.message-redirect .title {
+    color: #2abdbb;
+}
+
+button {
+    max-width: 350px;
+    margin: .3125rem;
+    padding: 0.2rem 0.5rem;
+    background-color: #ff640a;
+    color: #000;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+
+button span {
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+
+button:hover, button:active {
+    background-color: #ff7b2e;
+    color: #23252b;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+}
+
+a {
+    color: #ff640a;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #ff7b2e;
+    text-decoration-line: underline;
+    text-decoration-color: #ff7b2e;
+}
+
+.settings {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings .locale-label {
+    margin-bottom: 5px;
+    color: #a0a0a0;
+}
+
+.setting-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.setting-label:hover {
+    color: #2abdbb;
+    border-bottom: 1px solid #2abdbb;
+}
+
+.settings .locale-select {
+    border: none;
+    background-color: #23252b;
+    border-bottom: 1px solid #a0a0a0;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.setting-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle_switch {
+    align-items: center;
+    background-color: #192e38;
+    border: 2px solid #a0a0a0;
+    border-radius: .625rem;
+    display: flex;
+    height: 16px;
+    overflow: hidden;
+    padding-inline: 6px;
+    width: 24px;
+    margin-right: 15px;
+}
+
+.setting-checkbox.active .toggle_switch {
+    border: 2px solid #2abdbb;
+}
+
+.toggle_switch:before {
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: .5rem;
+    transition: transform .15s cubic-bezier(.5,0,.25,1);
+    width: .5rem;
+}
+
+.setting-checkbox.active .toggle_switch:before{
+    transform: translateX(1rem);
+    background-color: #2abdbb;
+}
+
+.toggle_switch:hover,  .setting-checkbox.active .toggle_switch:hover{
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.loader {
+    margin-right: .625rem;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ff7b2e;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    animation: pulse 1s linear infinite;
+}
+.loader:after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ff7b2e;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+    0% { transform: translate(-50%, -50%) scale(0) }
+    60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+}
+@keyframes pulse {
+    0% , 60% , 100%{ transform:  scale(1) }
+    80% { transform:  scale(1.2)}
+}

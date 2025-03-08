@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchyroll: Dub & Sub Finder</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="header">
+    <div class="title">
+        <img class="logo" src="../icons/icon.png" alt="Due & Sub Finder icon" />
+        <h2>Dub & Sub Finder</h2>
+    </div>
+    <div class="actions">
+        <button class="action" ><span>CREDITS</span></button>
+    </div>
+</div>
+<div class="container" id="mainContainer">
+    <div class="message-redirect" id="redirectMessage" style="display: none;">
+        <div class="title">
+            <p>You are not in Crunchyroll, click on the button.</p>
+        </div>
+        <div class="action">
+            <button class="redirect" ><span>REDIRECT</span></button>
+        </div>
+    </div>
+    <div class="message-redirect" id="tokenLoading" style="display: none;">
+        <div class="title">
+            <p>Obtaining available series with given locale...</p>
+        </div>
+        <div class="action">
+            <span class="loader"></span>
+        </div>
+    </div>
+    <div class="message-redirect" id="seriesObtained" style="display: none;">
+        <div class="title">
+            <p>Series obtained successfully. Click to see the new section.</p>
+        </div>
+        <div class="action">
+            <button class="redirect" ><span>GO</span></button>
+        </div>
+    </div>
+    <div class="message-redirect error" id="errors" style="display: none;">
+        <div class="title">
+            <p>Something gone wrong, click on button.</p>
+        </div>
+        <div class="action">
+            <button class="redirect" ><span>RETRY</span></button>
+        </div>
+    </div>
+    <div class="settings">
+        <div class="setting-label">
+            <label for="localeSelect" class="locale-label">Select Locale:</label>
+            <select id="localeSelect" class="locale-select" name="locales">
+                <option value="en-US">English (USA)</option>
+                <option value="es-419">Spanish (Latin America)</option>
+                <option value="pt-BR">Portuguese (Brazil)</option>
+                <option value="hi-IN">Hindi (India)</option>
+                <option value="ru-RU">Russian (Russia)</option>
+                <option value="de-DE">German (Germany)</option>
+                <option value="es-ES">Spanish (Spain)</option>
+                <option value="fr-FR">French (France)</option>
+                <option value="it-IT">Italian (Italy)</option>
+                <option value="ar-SA">Arabic (Saudi Arabia)</option>
+                <option value="vi-VN">Vietnamese (Vietnam)</option>
+                <option value="zh-HK">Chinese (Hong Kong)</option>
+                <option value="id-ID">Indonesian (Indonesia)</option>
+                <option value="zh-CN">Chinese (China)</option>
+                <option value="th-TH">Thai (Thailand)</option>
+                <option value="ms-MY">Malay (Malaysia)</option>
+            </select>
+        </div>
+        <div class="setting-checkbox active">
+            <input type="checkbox" id="dubCheckbox" style="display: none;">
+            <div class="toggle_switch" id="dubToggle"></div>
+            <label for="dubCheckbox">DUB Section</label>
+        </div>
+        <div class="setting-checkbox">
+            <input type="checkbox" id="subCheckbox" style="display: none;">
+            <div class="toggle_switch" id="subToggle"></div>
+            <label for="subCheckbox">SUB Section</label>
+        </div>
+    </div>
+</div>
+<div class="container" id="creditContainer" style="display: none;">
+    <div class="credits">
+        <h3>Developed by Andrea Panceri</h3>
+        <p>Support me on <a href="https://paypal.me/andreapanceri?country.x=IT&locale.x=it_IT" target="_blank">PayPal☕</a></p>
+    </div>
+</div>
+<div class="footer">
+    <p>Support me on <a href="https://paypal.me/andreapanceri?country.x=IT&locale.x=it_IT" target="_blank">PayPal☕</a></p>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

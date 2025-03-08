@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Doppiaggi Italiani su Crunchyroll",
+  "version": "1.0",
+  "description": "Mostra anime doppiati e sottotitolati in italiano su Crunchyroll.",
+  "permissions": ["scripting", "storage", "activeTab", "tabs", "webRequest"],
+  "host_permissions": ["https://www.crunchyroll.com/*"],
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.crunchyroll.com/*"],
+      "js": ["scripts/content.js"]
+    },
+    {
+      "matches": ["https://www.crunchyroll.com/*"],
+      "js": ["scripts/scroll.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.png"
+  }
+}
