@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Doppiaggi Italiani su Crunchyroll",
-  "version": "1.0",
+  "version": "1.1.0",
   "description": "Mostra anime doppiati e sottotitolati in italiano su Crunchyroll.",
   "permissions": ["scripting", "storage", "activeTab", "tabs", "webRequest"],
   "host_permissions": ["https://www.crunchyroll.com/*"],

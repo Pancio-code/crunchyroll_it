@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const redirectButton = redirectMessage.querySelector("button");
     const retryButton = errors.querySelector("button");
     const goButton = seriesObtained.querySelector("button");
+    const creditButton = document.getElementById("credit-button");
+    creditButton.addEventListener("click", async () => {
+        chrome.tabs.create({url: "https://github.com/Pancio-code/crunchyroll_it/tree/master"});
+    });
 
     const localeSelect = document.getElementById("localeSelect");
     const dubCheckbox = document.getElementById("dubCheckbox");
@@ -36,11 +40,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                         if (tab.url.includes("crunchyroll.com")) {
                             showSection("seriesObtained");
                             chrome.tabs.sendMessage(tab.id, {message: 'build_cards', dubEnabled: dubCheckbox.checked, subbedEnabled: subCheckbox.checked}, (response) => {
-                                if (chrome.runtime.lastError) {
-                                    console.error('Error:', chrome.runtime.lastError.message);
-                                    return;
-                                }
-
                                 if (response && response.success) {
                                     goButton.addEventListener('click', () => {
                                         chrome.scripting.executeScript({
@@ -69,11 +68,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (tab.url.includes("crunchyroll.com")) {
                     showSection("seriesObtained");
                     chrome.tabs.sendMessage(tab.id, {message: 'build_cards', dubEnabled: dubCheckbox.checked, subbedEnabled: subCheckbox.checked}, (response) => {
-                        if (chrome.runtime.lastError) {
-                            console.error('Error:', chrome.runtime.lastError.message);
-                            return;
-                        }
-
                         if (response && response.success) {
                             goButton.addEventListener('click', () => {
                                 chrome.scripting.executeScript({

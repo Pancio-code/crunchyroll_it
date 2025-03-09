@@ -34,9 +34,17 @@ This browser extension helps you easily find **Dubbed** and **Subbed** versions 
 
 ## Screenshots
 
-![Dub & Sub Finder](./assets/screenshot-1.png)
+![Dub & Sub Finder](./images/redirect.png)
 
-*Example of the Dub & Sub Finder Extension UI.*
+*Example of the Dub & Sub Finder popup when is open in a page that is not Crunchyroll website.*
+
+![Dub & Sub Finder](./images/success.png)
+
+*Example of the Dub & Sub Finder popup when is open in Crunchyroll website and series for the local selected are retrived correctly.*
+
+![Dub & Sub Finder](./images/section.png)
+
+*Example of the custom section that is created.*
 
 ---
 
@@ -62,11 +70,5 @@ If you encounter any issues or bugs, feel free to open an issue in the GitHub re
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-## Credits
-
-This extension was developed by **Andrea Panceri**. If you'd like to support further development, you can contribute or donate via [PayPal](https://paypal.me/andreapanceri?country.x=IT&locale.x=it_IT).
-
---- 
 
 Thank you for using the **Crunchyroll: Dub & Sub Finder** extension!
